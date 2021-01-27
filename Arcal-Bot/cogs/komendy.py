@@ -252,7 +252,7 @@ class Funkcje(commands.Cog):
 	@commands.command(name='gra_info')	
 	async def gra_info(self, ctx, tytul):
 		'''- Pamietaj, podaj tytul gry'''
-		headers = {'user-key': '839c05bd44e47d354fbec5ecb19640bc'}
+		headers = {'user-key': 'token'}
 
 		parameters = 'search "'+tytul+'"; fields name,genres,platforms,cover,release_dates.human;'
 		response = requests.post("https://api-v3.igdb.com/games", data=parameters, headers=headers)
