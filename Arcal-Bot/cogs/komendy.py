@@ -253,7 +253,7 @@ class Funkcje(commands.Cog):
 	@commands.command(name='gra_info')	
 	async def gra_info(self, ctx, tytul):
 		'''- Pamietaj, podaj tytul gry'''
-		headers = {'Client-ID': 'wvn2wjz8507v3ajv24ewu9090ic669', 'Authorization': 'Bearer bpvzygwivjh4vl0pq0h7hdjdexzyku'}
+		headers = {'Client-ID': 'xxx', 'Authorization': 'Bearer xxx'}
 
 		parameters = 'search "'+tytul+'"; fields name,genres,platforms,cover,release_dates.human;'
 		response = requests.post("https://api.igdb.com/v4/games", data=parameters, headers=headers)
@@ -288,7 +288,7 @@ class Funkcje(commands.Cog):
 	@commands.command(name='swgoh')	
 	async def swgoh(self, ctx, nazwa):
 		'''- po komendzie wprowadz nazwe postaci'''
-		headers = {'user-key': '839c05bd44e47d354fbec5ecb19640bc'}
+		headers = {'user-key': 'xxx'}
 		
 		response = requests.get("http://swgoh.gg/api/characters", headers=headers)
 		data = response.json()
